@@ -3,10 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-main { 
+main {
   min-height: 100vh;
   background: linear-gradient(to right top, #dda0dd, #add8e6);
   display: flex;
+  min-width: 100vh;
   align-items: center;
   justify-content: center;
   font-family: "Poppins";
@@ -20,7 +21,7 @@ h1 {
 }
 
 h2,
-p{
+p {
   color: #191970;
   font-weight: 300;
   opacity: 0.8;
@@ -32,9 +33,7 @@ h3 {
   opacity: 0.8;
 }
 .glass {
-  height: 30%;
   background: white;
-  width: 70%;
   border-radius: 2rem;
   background: linear-gradient(
     to right bottom,
@@ -46,11 +45,11 @@ h3 {
   display: flex;
 }
 
-.me{
+.me {
   margin: 1rem;
   border-radius: 50%;
 }
-a{
+a {
   text-decoration: none;
 }
 a:hover {
@@ -58,7 +57,7 @@ a:hover {
   border-radius: 2rem;
 }
 .dashboard {
-  flex:0;
+  flex: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,7 +77,6 @@ a:hover {
   margin: 1rem 0rem;
   padding: 1rem 2rem;
   align-items: center;
-
 }
 
 .link h2 {
@@ -93,18 +91,18 @@ a:hover {
   justify-content: space-evenly;
 }
 
-
-.card{
+.card {
   display: flex;
   background: linear-gradient(
-    to left top, 
-    rgba(255,255,255,1), 
-    rgba(255,255,255,0.3));
-    border-radius: 1rem;
-    margin: 2rem;
-    padding: 1rem;
-    box-shadow: 6px 6px 20px rgba(122,122,122,0.2);
-    justify-content: space-between;
+    to left top,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 1rem;
+  margin: 2rem;
+  padding: 1rem;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
+  justify-content: space-between;
 }
 
 .card-info {
@@ -112,7 +110,7 @@ a:hover {
   flex-direction: column;
   justify-content: space-between;
 }
-.progress{
+.progress {
   background: linear-gradient(to right top, #dda0dd, #add8e6);
   margin: 0rem;
   padding: 0.5rem;
@@ -123,24 +121,24 @@ a:hover {
   overflow: hidden;
 }
 
-
 .status {
   margin-bottom: 3rem;
 }
-.status input{
+.status input {
   background: linear-gradient(
-    to right bottom, 
-    rgba(255,255,255,1), 
-    rgba(255,255,255,0.6));
-    border: none;
-    border-radius: 2rem;
-    width: 50%;
-    padding: 0.5rem;
+    to right bottom,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0.6)
+  );
+  border: none;
+  border-radius: 2rem;
+  width: 50%;
+  padding: 0.5rem;
 }
 
-.level{
+.level {
   font-weight: bold;
-  background: linear-gradient(to right top,#dda0dd, #add8e6);
+  background: linear-gradient(to right top, #dda0dd, #add8e6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -186,4 +184,54 @@ a:hover {
 .circle6 {
   top: -7%;
   left: 20%;
+}
+
+@media only screen and (max-width: 700px) {
+  body {
+    background: linear-gradient(to right top, #dda0dd, #add8e6);
+    font-family: "Poppins";
+  }
+  .glass {
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.1)
+    );
+    height: 100%;
+    min-width: 100%;
+    position: absolute;
+  }
+
+  .circle1,
+  .circle2,
+  .circle3,
+  .circle4,
+  .circle5,
+  .circle6 {
+    display: none;
+  }
+  .dashboard {
+    background: none;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+  .portfolio {
+    position: relative;
+  }
+  .card {
+    background: linear-gradient(
+      to left top,
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.3)
+    );
+  }
+  .status {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+  }
 }
