@@ -187,9 +187,12 @@ a:hover {
 }
 
 @media only screen and (max-width: 700px) {
-  body {
-    background: linear-gradient(to right top, #dda0dd, #add8e6);
+  main {
+    background: #d7c5cf;
     font-family: "Poppins";
+  }
+  body {
+    background: #d7c5cf;
   }
   .glass {
     border-radius: 0;
